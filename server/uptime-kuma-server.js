@@ -92,6 +92,7 @@ class UptimeKumaServer {
                 key: fs.readFileSync(sslKey),
                 cert: fs.readFileSync(sslCert),
                 passphrase: sslKeyPassphrase,
+                maxHeaderSize: 8192*6
             }, this.app);
         } else {
             log.info("server", "Server Type: HTTP");
